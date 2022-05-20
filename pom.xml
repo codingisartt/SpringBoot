@@ -40,6 +40,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        <!-- Jdbc -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
 
         <!-- H2Database -->
         <dependency>
@@ -48,40 +53,40 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Mssql -->
-        <dependency>
+        <!-- Mssql
+         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>  -->
 
-        <!-- Oracle -->
+        <!-- Oracle
         <dependency>
             <groupId>com.oracle.database.jdbc</groupId>
             <artifactId>ojdbc8</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>  -->
 
-        <!-- Mysql -->
+        <!-- Mysql
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>  -->
 
-        <!-- Mariadb -->
+        <!-- Mariadb
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>  -->
 
-        <!-- PostgreSql -->
-        <dependency>
+        <!-- PostgreSql
+         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>  -->
 
         <!-- security Comment out, build -->
         <dependency>
