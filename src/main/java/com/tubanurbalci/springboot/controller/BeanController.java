@@ -6,6 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.PostConstruct;
+import java.util.logging.Logger;
+
 @Controller
 public class BeanController {
 
@@ -17,5 +20,24 @@ public class BeanController {
     @ResponseBody // show directly on screen without Html etc
     public String getBeanDto(){
         return beanConfig.beanDto()+"";
+    }
+
+    @Autowired
+    Logger LOG;
+
+//  public BeanController() {
+//      LOG.info("Log info is called");
+//  }
+
+    // We get null because the bean structure has not yet started and we can not inject dependency
+    // Task: occurs immediately when an bean object occurs. (PostConstruct)
+    @PostConstruct
+    public void  init(){
+        LOG.info("Log info is called");
+    }
+
+    public static void main(String[] args) {
+        BeanController beanController=new BeanController();
+        System.out.println(beanController);
     }
 }
