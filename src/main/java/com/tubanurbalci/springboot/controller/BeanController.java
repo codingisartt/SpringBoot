@@ -22,8 +22,8 @@ public class BeanController {
         return beanConfig.beanDto()+"";
     }
 
-    @Autowired
-    Logger LOG;
+//  @Autowired
+//  Logger LOG;
 
 //  public BeanController() {
 //      LOG.info("Log info is called");
@@ -31,13 +31,13 @@ public class BeanController {
 
     // We get null because the bean structure has not yet started and we can not inject dependency
     // Task: occurs immediately when an bean object occurs. (PostConstruct)
-    @PostConstruct
-    public void  init(){
-        LOG.info("Log info is called");
-    }
+//  @PostConstruct
+//  public void  init(){
+//      LOG.info("Log info is called");
+//  }
 
-    public static void main(String[] args) {
-        BeanController beanController=new BeanController();
-        System.out.println(beanController);
-    }
+//  public static void main(String[] args) {
+//      BeanController beanController=new BeanController();
+//      System.out.println(beanController);
+//  }
 }
