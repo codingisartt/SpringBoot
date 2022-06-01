@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="container bg-dark text-white">
+
+
+<p th:text="${key_model1}"></p>
+<p th:text="${product_list}"></p>
+<hr>
+<table class="table table-striped table-hover bg-primary text-white">
+    <tr th:each="temp:${product_list}">
+        <td th:text="${temp.getProductId()}"></td>
+        <td th:text="${temp.getProductName()}"></td>
+        <td th:text="${temp.productPrice}"></td>
+        <td th:if="${temp.productPrice>2500}"    th:text=" 'Greater than' "></td>
+        <td th:unless="${temp.productPrice>2500}"  th:text=" 'Less than' "></td>
+
+    </tr>
+</table>
+
+
+
+</body>
+</html>
