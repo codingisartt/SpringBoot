@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
@@ -84,8 +85,9 @@ public class ThymeleafController {
     }
 
     /////////////////////////////////////
-    // Model Object
+    // @PathVariable
     // http://localhost:8080/thymeleaf7/8
+    // http://localhost:8080/thymeleaf7/
     @GetMapping({"/thymeleaf7","/thymeleaf7/{id}"})
     public String getThymeleaf7ModelObject(Model model, @PathVariable(name = "id",required = false) Long id){
         if(id!=null) {
@@ -96,4 +98,18 @@ public class ThymeleafController {
 
         return "thymeleaf7";
     }
+
+    // @RequestParam
+    // http://localhost:8080/thymeleaf8?id=25&name=TubanurBalci
+    @GetMapping("/thymeleaf8")
+    // just "required=false" shows "null" statement (not error) when id does not exist
+    public String getThymeleaf8ModelObject(Model model, @RequestParam(name = "id",required = false,defaultValue = "0" ) Long id, @RequestParam(name = "name" ) String ad){
+        if(id!=null) {
+            model.addAttribute("key_model1", "id: " + id + " -Name Surname: "+ad);
+        }else{
+            model.addAttribute("key_model1", "id not found ! ");
+        }
+        return "thymeleaf8";
+    }
+
 }
