@@ -1,4 +1,4 @@
-package com.tubanurbalci.springboot.dto;
+package com.tubanurbalci.springboot.tutorials.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

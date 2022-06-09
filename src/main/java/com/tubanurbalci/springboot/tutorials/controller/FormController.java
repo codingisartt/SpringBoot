@@ -1,6 +1,6 @@
-package com.tubanurbalci.springboot.controller;
+package com.tubanurbalci.springboot.tutorials.controller;
 
-import com.tubanurbalci.springboot.dto.TeacherDto;
+import com.tubanurbalci.springboot.tutorials.dto.TeacherDto;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,6 +1,6 @@
-package com.tubanurbalci.springboot.bean;
+package com.tubanurbalci.springboot.tutorials.bean;
 
-import com.tubanurbalci.springboot.dto.BeanDto;
+import com.tubanurbalci.springboot.tutorials.dto.BeanDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
