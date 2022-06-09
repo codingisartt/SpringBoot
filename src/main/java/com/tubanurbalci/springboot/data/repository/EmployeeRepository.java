@@ -1,4 +1,4 @@
-package com.tubanurbalci.springboot.repository;
+package com.tubanurbalci.springboot.data.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

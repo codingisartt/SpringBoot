@@ -1,4 +1,4 @@
-package com.tubanurbalci.springboot.entity;
+package com.tubanurbalci.springboot.data.entity;
 
 import lombok.Builder;
 import lombok.Data;

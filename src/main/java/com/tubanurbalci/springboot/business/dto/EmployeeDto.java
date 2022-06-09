@@ -1,4 +1,4 @@
-package com.tubanurbalci.springboot.dto;
+package com.tubanurbalci.springboot.business.dto;
 
 // DTO: Data Transfer Object
 
